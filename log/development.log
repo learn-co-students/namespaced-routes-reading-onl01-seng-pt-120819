@@ -4470,3 +4470,484 @@ ActionController::RoutingError (No route matches [GET] "/stats"):
   Rendered /Users/scottcreynolds/.rvm/gems/ruby-2.1.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
   Rendered /Users/scottcreynolds/.rvm/gems/ruby-2.1.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
   Rendered /Users/scottcreynolds/.rvm/gems/ruby-2.1.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (34.6ms)
+Started GET "/admin/stats" for ::1 at 2020-05-26 03:47:17 -0400
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from block (3 levels) in <class:Railtie> at /Users/Mom/.rvm/gems/ruby-2.5.5/gems/activerecord-5.0.7.2/lib/active_record/railtie.rb:113)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StatsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "authors"[0m
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering stats/index.html.erb within layouts/application
+  Rendered stats/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 723ms (Views: 695.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2020-05-26 03:47:18 -0400
+Started GET "/stats" for ::1 at 2020-05-26 03:47:34 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/stats"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+rack (2.2.2) lib/rack/handler/webrick.rb:95:in `service'
+/Users/Mom/.rvm/rubies/ruby-2.5.5/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+/Users/Mom/.rvm/rubies/ruby-2.5.5/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+/Users/Mom/.rvm/rubies/ruby-2.5.5/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered collection of /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [15 times] (11.5ms)
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (9.2ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (164.5ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (7.9ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers__om__rvm_gems_ruby_______gems_web_console_______lib_web_console_templates_console_js_erb___209499105875309370_70140153491320 at /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (113.7ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (236.5ms)
+Started GET "/stats" for ::1 at 2020-05-26 03:47:40 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/stats"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+rack (2.2.2) lib/rack/handler/webrick.rb:95:in `service'
+/Users/Mom/.rvm/rubies/ruby-2.5.5/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+/Users/Mom/.rvm/rubies/ruby-2.5.5/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+/Users/Mom/.rvm/rubies/ruby-2.5.5/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered collection of /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [15 times] (9.3ms)
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (139.1ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers__om__rvm_gems_ruby_______gems_web_console_______lib_web_console_templates_console_js_erb___209499105875309370_70140160148680 at /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (87.3ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (202.5ms)
+Started GET "/stats" for ::1 at 2020-05-26 03:47:44 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/stats"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+rack (2.2.2) lib/rack/handler/webrick.rb:95:in `service'
+/Users/Mom/.rvm/rubies/ruby-2.5.5/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+/Users/Mom/.rvm/rubies/ruby-2.5.5/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+/Users/Mom/.rvm/rubies/ruby-2.5.5/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered collection of /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [15 times] (4.0ms)
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (137.4ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers__om__rvm_gems_ruby_______gems_web_console_______lib_web_console_templates_console_js_erb___209499105875309370_70140160466340 at /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (96.6ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (215.5ms)
+Started GET "/stats" for ::1 at 2020-05-26 03:47:46 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/stats"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+rack (2.2.2) lib/rack/handler/webrick.rb:95:in `service'
+/Users/Mom/.rvm/rubies/ruby-2.5.5/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+/Users/Mom/.rvm/rubies/ruby-2.5.5/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+/Users/Mom/.rvm/rubies/ruby-2.5.5/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered collection of /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [15 times] (3.8ms)
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.3ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (135.8ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.3ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers__om__rvm_gems_ruby_______gems_web_console_______lib_web_console_templates_console_js_erb___209499105875309370_70140159721560 at /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (87.6ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (202.2ms)
+Started GET "/stats" for ::1 at 2020-05-26 03:47:47 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/stats"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+rack (2.2.2) lib/rack/handler/webrick.rb:95:in `service'
+/Users/Mom/.rvm/rubies/ruby-2.5.5/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+/Users/Mom/.rvm/rubies/ruby-2.5.5/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+/Users/Mom/.rvm/rubies/ruby-2.5.5/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered collection of /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [15 times] (6.4ms)
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (140.9ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers__om__rvm_gems_ruby_______gems_web_console_______lib_web_console_templates_console_js_erb___209499105875309370_70140161074160 at /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (88.3ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (199.1ms)
+Started GET "/stats" for ::1 at 2020-05-26 03:47:48 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/stats"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+rack (2.2.2) lib/rack/handler/webrick.rb:95:in `service'
+/Users/Mom/.rvm/rubies/ruby-2.5.5/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+/Users/Mom/.rvm/rubies/ruby-2.5.5/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+/Users/Mom/.rvm/rubies/ruby-2.5.5/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered collection of /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [15 times] (4.0ms)
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (146.9ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers__om__rvm_gems_ruby_______gems_web_console_______lib_web_console_templates_console_js_erb___209499105875309370_70140161302840 at /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (116.6ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (230.5ms)
+Started GET "/stats" for ::1 at 2020-05-26 03:47:50 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/stats"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+rack (2.2.2) lib/rack/handler/webrick.rb:95:in `service'
+/Users/Mom/.rvm/rubies/ruby-2.5.5/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+/Users/Mom/.rvm/rubies/ruby-2.5.5/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+/Users/Mom/.rvm/rubies/ruby-2.5.5/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered collection of /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [15 times] (3.7ms)
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (134.4ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers__om__rvm_gems_ruby_______gems_web_console_______lib_web_console_templates_console_js_erb___209499105875309370_70140161733620 at /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (89.3ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (203.6ms)
+Started GET "/admin" for ::1 at 2020-05-26 03:48:33 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/admin"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+rack (2.2.2) lib/rack/handler/webrick.rb:95:in `service'
+/Users/Mom/.rvm/rubies/ruby-2.5.5/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+/Users/Mom/.rvm/rubies/ruby-2.5.5/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+/Users/Mom/.rvm/rubies/ruby-2.5.5/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered collection of /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [15 times] (14.6ms)
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (208.4ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers__om__rvm_gems_ruby_______gems_web_console_______lib_web_console_templates_console_js_erb___209499105875309370_70140120378620 at /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (122.6ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (290.8ms)
+Started GET "/admin" for ::1 at 2020-05-26 03:48:37 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/admin"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+rack (2.2.2) lib/rack/handler/webrick.rb:95:in `service'
+/Users/Mom/.rvm/rubies/ruby-2.5.5/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+/Users/Mom/.rvm/rubies/ruby-2.5.5/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+/Users/Mom/.rvm/rubies/ruby-2.5.5/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered collection of /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [15 times] (4.3ms)
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (191.6ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers__om__rvm_gems_ruby_______gems_web_console_______lib_web_console_templates_console_js_erb___209499105875309370_70140168244880 at /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (131.0ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendering /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/Mom/.rvm/gems/ruby-2.5.5/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (298.8ms)
